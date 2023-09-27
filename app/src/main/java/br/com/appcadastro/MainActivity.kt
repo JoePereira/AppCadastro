@@ -9,6 +9,7 @@ import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.Spinner
+import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -77,17 +78,17 @@ class MainActivity : AppCompatActivity() {
             }
 
             // Mostrar a mensagem em um Toast
-            // Toast.makeText(this, mensagem, Toast.LENGTH_LONG).show()
+//            Toast.makeText(this, mensagem, Toast.LENGTH_LONG).show()
 
             // Exibir informações em um AlertDialog
-            showInfoDialog("Informações Digitadas", mensagem)
+            showInfoDialog("Informações do Usuário", mensagem)
 
 
         })
     }
     private fun showAlert(message: String) {
         val builder = AlertDialog.Builder(this)
-        builder.setTitle("Desculpe! Atenção")
+        builder.setTitle("Informações Pendentes!")
         builder.setMessage(message)
         builder.setPositiveButton("OK") { dialog, _ -> dialog.dismiss() }
         val dialog = builder.create()
